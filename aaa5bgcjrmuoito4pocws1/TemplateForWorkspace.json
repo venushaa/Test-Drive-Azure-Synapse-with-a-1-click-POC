@@ -1089,10 +1089,18 @@
 			"type": "Microsoft.Synapse/workspaces/linkedServices",
 			"apiVersion": "2019-06-01-preview",
 			"properties": {
-				"annotations": [],
 				"type": "PowerBIWorkspace",
+				"parameters": {
+					"workspaceID": {
+						"type": "string"
+					},
+					"datalakeAccountName": {
+						"type": "string"
+					}
+				},
+				"annotations": [],
 				"typeProperties": {
-					"workspaceID": "",
+					"workspaceID": "@linkedService().datalakeAccountName",
 					"tenantID": "72f988bf-86f1-41af-91ab-2d7cd011db47"
 				}
 			},

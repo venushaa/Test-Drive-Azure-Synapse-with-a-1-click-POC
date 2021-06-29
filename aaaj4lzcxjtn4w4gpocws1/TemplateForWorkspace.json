@@ -1085,20 +1085,6 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('workspaceName'), '/PowerBIWorkspaceTripsFares')]",
-			"type": "Microsoft.Synapse/workspaces/linkedServices",
-			"apiVersion": "2019-06-01-preview",
-			"properties": {
-				"annotations": [],
-				"type": "PowerBIWorkspace",
-				"typeProperties": {
-					"workspaceID": "",
-					"tenantID": "72f988bf-86f1-41af-91ab-2d7cd011db47"
-				}
-			},
-			"dependsOn": []
-		},
-		{
 			"name": "[concat(parameters('workspaceName'), '/TripFaresDataLakeStorageLinkedService')]",
 			"type": "Microsoft.Synapse/workspaces/linkedServices",
 			"apiVersion": "2019-06-01-preview",
@@ -1647,6 +1633,20 @@
 			"type": "Microsoft.Synapse/workspaces/managedVirtualNetworks",
 			"apiVersion": "2019-06-01-preview",
 			"properties": {},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('workspaceName'), '/PowerBIWorkspaceTripsFares')]",
+			"type": "Microsoft.Synapse/workspaces/linkedServices",
+			"apiVersion": "2019-06-01-preview",
+			"properties": {
+				"annotations": [],
+				"type": "PowerBIWorkspace",
+				"typeProperties": {
+					"workspaceID": "fa2884bf-8eb5-4859-b557-ecb92285ff5f",
+					"tenantID": "72f988bf-86f1-41af-91ab-2d7cd011db47"
+				}
+			},
 			"dependsOn": []
 		}
 	]
